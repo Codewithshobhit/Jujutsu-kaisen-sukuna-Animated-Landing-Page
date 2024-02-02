@@ -1,0 +1,168 @@
+/* Font Family  */
+@font-face { font-family: 'Keshiki';  src: url("font-family/Keshiki/Sdasian-WyDon.ttf");  }
+@font-face { font-family: 'sd-asian'; src: url("font-family/SD-Asian/Sdasian-WyDon.ttf"); }
+@font-face { font-family: 'Poppins'; src: url("font-family/Poppins/Poppins-Medium.ttf");}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+    transition: 1s;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.navbar {
+    padding: 12px 10px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'sd-asian';
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul a {
+    display: block;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-family: 'Keshiki';
+    position: relative;
+}
+
+.navbar ul:has(a:hover) a:not(:hover) {
+    filter: blur(10px);
+}
+
+.page-content {
+    text-align: center;
+    margin-top: 12rem;
+    padding: 0 10px;
+}
+
+.page-content .inner-content .heading {
+    font-size: 16rem;
+    font-family: 'sd-asian';
+}
+
+.page-content .inner-content p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-content .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-content .buttons a {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin: 0 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(60px);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #ffffff1e;
+}
+
+.page-content .buttons a.active {
+    background-color: #e1340d;
+}
+
+.page-content .buttons a.active:hover {
+    box-shadow: 0 0 40px rgb(253, 2, 2);
+}
+
+.page-content .buttons a:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, #ffffff00, #ffffff20, #ffffff00);
+    z-index: -1;
+}
+
+.page-content .buttons a:nth-child(2):hover::before { 
+    left: 100%;
+}
+
+.page-content .buttons a:nth-child(2):hover {
+    transition-delay: .3s;
+    box-shadow: 0 0 40px rgb(238, 5, 5);
+    background-color: #ff310c;
+}
+
+.page-content .social-links {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .social-links a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    backdrop-filter: blur(160px);
+    background: #c624f71e;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.page-content .social-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #f15405;
+    z-index: -1;
+}
+
+.page-content .social-links a:hover::after { 
+    height: 100%;
+}
